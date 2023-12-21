@@ -69,3 +69,33 @@ Both of the given trees will have values in the range `[0, 200]`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've defined a function called `leafSimilar` that takes in two binary tree roots, `root1` and `root2`, as parameters. The purpose of this function is to check if the leaves of both trees are similar.
+<br/>
+
+Inside the function, two empty arrays `leaf1` and `leaf2` are declared. These arrays will store the leaf values of `root1` and `root2`, respectively.
+<br/>
+
+The function also defines a helper function called `dfs` (depth-first search) which takes in a `node` and a `leaf` array as parameters.
+<br/>
+
+Within the `dfs` function, it first checks if the `node` is null. If it is, the function returns, as there are no more nodes to process.
+<br/>
+
+Next, it checks if the `node` has no left and right children, indicating that it is a leaf node. If it is, the value of the `node` is pushed to the `leaf` array and the function returns.
+<br/>
+
+If the `node` is not a leaf node, the `dfs` function is recursively called for its left child and right child, passing the same `leaf` array.
+<br/>
+
+Once the `dfs` function is defined, it is called twice with `root1` and `root2` as the nodes, and `leaf1` and `leaf2` as the leaf arrays, respectively.
+<br/>
+
+Finally, the function checks if the joined string representation of the `leaf1` array, with elements separated by '_', is equal to the joined string representation of the `leaf2` array. If they are equal, it returns `true`, indicating that the leaves of both trees are similar. Otherwise, it returns `false`.
+<br/>
+
+In summary, the `leafSimilar` function checks if the leaves of two binary trees are similar. It uses a depth-first search (DFS) approach to traverse the trees and store the leaf values in separate arrays. It then compares the arrays to determine if the leaves are similar.
+<br/>
+<br/>

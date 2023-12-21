@@ -39,3 +39,21 @@ The number of nodes in both trees is in the range `[0, 100]`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've coded a function called `isSameTree` that takes two arguments, `p` and `q`. The purpose of this function is to compare if the JSON stringified versions of the two arguments are equal.
+<br/>
+
+Inside the function, the `JSON.stringify()` method is used to convert both `p` and `q` into JSON strings. This method serializes the arguments into a string representation.
+<br/>
+
+The `===` operator is then used to compare the two JSON strings. This operator checks for strict equality, meaning it not only compares the values but also the types of the values.
+<br/>
+
+If the two JSON strings are equal, which means the arguments have the same structure and values, the function returns `true`. Otherwise, it returns `false`, indicating that the arguments are different.
+<br/>
+
+In summary, this function compares if two arguments, `p` and `q`, are the same by converting them into JSON strings and checking for equality. It provides a convenient way to compare complex data structures represented as objects or arrays.
+<br/>
+<br/>

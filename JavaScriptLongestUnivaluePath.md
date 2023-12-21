@@ -72,3 +72,45 @@ The depth of the tree will not exceed `1000`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've built a function called `longestUnivaluePath` that takes a binary tree as input and returns the length of the longest path in the tree where all nodes have the same value.
+<br/>
+
+Inside the function, the first line checks if the root node is null. If it is null, it means the tree is empty, so the function returns 0.
+<br/>
+
+A variable called `max` is initialized to 0. This variable will keep track of the maximum length of the univalue path.
+<br/>
+
+It then calls a helper function called `dfs` passing the root node as an argument.
+<br/>
+
+The `dfs` function is defined inside the main function and takes the current node as an argument.
+<br/>
+
+Inside the `dfs` function, the first line checks if the current node is null. If it is null, it means we have reached the end of a branch, so the function returns 0.
+<br/>
+
+It then recursively calls the `dfs` function on the left and right children of the current node and assigns the returned values to the variables `left` and `right` respectively.
+<br/>
+
+The next two lines check if the current node has a left child and if the value of the left child is different from the value of the current node. If either condition is true, it means the left child does not belong to the same univalue path, so the `left` variable is set to 0.
+<br/>
+
+Similarly, the next two lines check if the current node has a right child and if the value of the right child is different from the value of the current node. If either condition is true, it means the right child does not belong to the same univalue path, so the `right` variable is set to 0.
+<br/>
+
+It then calculates the sum of `left` and `right` and compares it with the current maximum `max` using the `Math.max()` function. If the sum is greater than `max`, the `max` variable is updated with the new value.
+<br/>
+
+Finally, it returns the maximum value between `left` and `right` incremented by 1. This represents the length of the univalue path from the current node.
+<br/>
+
+After the `dfs` function is defined, the main function returns the value of `max`, which represents the length of the longest univalue path in the binary tree.
+<br/>
+
+In summary, this function uses a depth-first search (DFS) approach to traverse a binary tree and find the longest path where all nodes have the same value. It recursively calculates the length of the univalue path for each node and keeps track of the maximum length encountered. The final result is the length of the longest univalue path in the tree.
+<br/>
+<br/>

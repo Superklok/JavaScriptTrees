@@ -47,3 +47,27 @@ The number of nodes in the tree is in the range `[1, 1000]`.
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've written a function called `sumOfLeftLeaves` that calculates the sum of the values of the left leaves in a binary tree.
+<br/>
+
+If the root node is null, indicating an empty tree, the function immediately returns `0`.
+<br/>
+
+If the root node is not null, the function uses destructuring assignment to extract the `left` and `right` children of the root node.
+<br/>
+
+The function then recursively calls itself on the "left" and "right" children, storing the returned values in the variables `sumLeft` and `sumRight` respectively.
+<br/>
+
+Next, it checks if `sumLeft` is `0`, which means there are no left leaves encountered yet. It also checks if the `left` child exists and is a leaf node, meaning it has no left or right child. If these conditions are met, the value of the leaf node is assigned to `sumLeft`.
+<br/>
+
+Finally, the function returns the sum of `sumLeft` and `sumRight`, after converting them to numbers using the "Number" function.
+<br/>
+
+In summary, this function recursively calculates the sum of the values of the left leaves in a binary tree. It traverses the tree, keeping track of the sum of the left leaves encountered so far, and returns the final sum.
+<br/>
+<br/>

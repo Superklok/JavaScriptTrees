@@ -1,76 +1,71 @@
 # JavaScript Leaf-Similar Trees
+<br/>
 
-## Challenge:
-
+## Challenge
 Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.
 
 Two binary trees are considered leaf-similar if their leaf value sequence is the same.
 
 Return `true` if and only if the two given trees with head nodes `root1` and `root2` are leaf-similar.
-
-### 1<sup>st</sup> Example:
-
-`Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]`
-<br/>
-`Output: true`
-
-### 2<sup>nd</sup> Example:
-
-`Input: root1 = [1,2,3], root2 = [1,3,2]`
-<br/>
-`Output: false`
-
-### Constraints:
-
-The number of nodes in each tree will be in the range `[1, 200]`.
-<br/>
-Both of the given trees will have values in the range `[0, 200]`.
-
-## Solution:
-
-`const leafSimilar = (root1, root2) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`let leaf1 = [],`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`leaf2 = [];`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`const dfs = (node, leaf) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if (!node) return;`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if (!node.left && !node.right) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`leaf.push(node.val);`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dfs(node.left, leaf);`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dfs(node.right, leaf);`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`};`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dfs(root1, leaf1);`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`dfs(root2, leaf2);`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return leaf1.join('_') == leaf2.join('_');`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], 
+       root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
+Output: true
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: root1 = [1,2,3], root2 = [1,3,2]
+Output: false
+```
+
+<br/>
+
+### Constraints
+
+- The number of nodes in each tree will be in the range `[1, 200]`.
+- Both of the given trees will have values in the range `[0, 200]`.
+
+<br/>
+
+## Solution
+
+```JavaScript
+const leafSimilar = (root1, root2) => {
+    let leaf1 = [],
+        leaf2 = [];
+
+    const dfs = (node, leaf) => {
+        if (!node) return;
+
+        if (!node.left && !node.right) {
+            leaf.push(node.val);
+
+            return;
+        }
+
+        dfs(node.left, leaf);
+
+        dfs(node.right, leaf);
+    };
+
+    dfs(root1, leaf1);
+
+    dfs(root2, leaf2);
+
+    return leaf1.join('_') == leaf2.join('_');
+};
+```
+
+<br/>
+
+## Explanation
 
 I've defined a function called `leafSimilar` that takes in two binary tree roots, `root1` and `root2`, as parameters. The purpose of this function is to check if the leaves of both trees are similar.
 <br/>
@@ -93,7 +88,7 @@ If the `node` is not a leaf node, the `dfs` function is recursively called for i
 Once the `dfs` function is defined, it is called twice with `root1` and `root2` as the nodes, and `leaf1` and `leaf2` as the leaf arrays, respectively.
 <br/>
 
-Finally, the function checks if the joined string representation of the `leaf1` array, with elements separated by '_', is equal to the joined string representation of the `leaf2` array. If they are equal, it returns `true`, indicating that the leaves of both trees are similar. Otherwise, it returns `false`.
+Finally, the function checks if the joined string representation of the `leaf1` array, with elements separated by `'_'`, is equal to the joined string representation of the `leaf2` array. If they are equal, it returns `true`, indicating that the leaves of both trees are similar. Otherwise, it returns `false`.
 <br/>
 
 In summary, the `leafSimilar` function checks if the leaves of two binary trees are similar. It uses a depth-first search (DFS) approach to traverse the trees and store the leaf values in separate arrays. It then compares the arrays to determine if the leaves are similar.

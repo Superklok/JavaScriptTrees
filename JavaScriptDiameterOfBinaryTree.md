@@ -29,10 +29,7 @@ Output: 1
 
 ### Constraints
 
-```JavaScript
--100 <= Node.val <= 100
-```
-
+- `-100 <= Node.val <= 100`
 - The number of nodes in the tree is in the range `[1, 10⁴]`.
 
 <br/>
@@ -94,3 +91,22 @@ The final value of the `diameter` variable is returned as the result of the `dia
 In summary, this function uses a recursive approach to calculate the diameter of a binary tree. It defines a nested function called `depth` to calculate the depth of each node, and updates the `diameter` variable to keep track of the longest path encountered. The final diameter of the binary tree is returned as the output of the function.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Longest Univalue Path)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Sum of Left Leaves)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Tree Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptLongestUnivaluePath.md
+[Previous]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptSumOfLeftLeaves.md
+[More]: https://github.com/Superklok/JavaScriptTrees
+[Return]: https://github.com/Superklok/LearnJavaScript

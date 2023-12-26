@@ -31,10 +31,7 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 
 ### Constraints
 
-```JavaScript
--2³¹ <= Node.val <= 2³¹ - 1
-```
-
+- `-2³¹ <= Node.val <= 2³¹ - 1`
 - The number of nodes in the tree is in the range `[1, 10⁴]`.
 
 <br/>
@@ -73,3 +70,22 @@ Finally, the function returns the logical AND of the results of the recursive ca
 In summary, this function checks if a binary tree is a valid binary search tree by recursively validating the left and right subtrees. It ensures that the values in the left subtree are less than the current node, and the values in the right subtree are greater than the current node. The function returns `true` if the tree satisfies these conditions and `false` otherwise.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (N-ary Tree Postorder Traversal)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Time & Space Complexity)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Tree Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptNaryTreePostorderTraversal.md
+[Previous]: https://github.com/Superklok/ProgrammingPrinciples/blob/main/TimeAndSpaceComplexity.md
+[More]: https://github.com/Superklok/JavaScriptTrees
+[Return]: https://github.com/Superklok/LearnJavaScript

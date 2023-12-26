@@ -33,10 +33,7 @@ Output: false
 
 ### Constraints
 
-```JavaScript
--10⁴ <= Node.val <= 10⁴
-```
-
+- `-10⁴ <= Node.val <= 10⁴`
 - The number of nodes in both trees is in the range `[0, 100]`.
 
 <br/>
@@ -68,3 +65,22 @@ If the two JSON strings are equal, which means the arguments have the same struc
 In summary, this function compares if two arguments, `p` and `q`, are the same by converting them into JSON strings and checking for equality. It provides a convenient way to compare complex data structures represented as objects or arrays.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Sum of Left Leaves)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Leaf-Similar Trees)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Tree Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptSumOfLeftLeaves.md
+[Previous]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptLeafSimilarTrees.md
+[More]: https://github.com/Superklok/JavaScriptTrees
+[Return]: https://github.com/Superklok/LearnJavaScript

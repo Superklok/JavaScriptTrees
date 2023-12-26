@@ -94,3 +94,22 @@ Finally, the function checks if the joined string representation of the `leaf1` 
 In summary, the `leafSimilar` function checks if the leaves of two binary trees are similar. It uses a depth-first search (DFS) approach to traverse the trees and store the leaf values in separate arrays. It then compares the arrays to determine if the leaves are similar.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Same Tree)][Next]
+<br/>
+
+### :previous_track_button: [Previous (N-ary Tree Postorder Traversal)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Tree Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptSameTree.md
+[Previous]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptNaryTreePostorderTraversal.md
+[More]: https://github.com/Superklok/JavaScriptTrees
+[Return]: https://github.com/Superklok/LearnJavaScript

@@ -26,10 +26,7 @@ Output: [2,6,14,11,7,3,12,8,4,13,9,10,5,1]
 
 ### Constraints
 
-```JavaScript
-0 <= Node.val <= 10⁴
-```
-
+- `0 <= Node.val <= 10⁴`
 - The number of nodes in the tree is in the range `[0, 10⁴]`.
 - The height of the n-ary tree is less than or equal to `1000`.
 
@@ -89,3 +86,22 @@ Finally, the function returns the `res` array in reverse order using the `revers
 In summary, this function performs a postorder traversal on a tree structure by using a stack to keep track of the nodes. It stores the node values in postorder and returns them in reverse order as the output of the function.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Leaf-Similar Trees)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Validate Binary Search Tree)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Tree Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptLeafSimilarTrees.md
+[Previous]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptValidateBinarySearchTree.md
+[More]: https://github.com/Superklok/JavaScriptTrees
+[Return]: https://github.com/Superklok/LearnJavaScript

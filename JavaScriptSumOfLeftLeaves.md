@@ -27,10 +27,7 @@ Output: 0
 
 ### Constraints
 
-```JavaScript
--1000 <= Node.val <= 1000
-```
-
+- `-1000 <= Node.val <= 1000`
 - The number of nodes in the tree is in the range `[1, 1000]`.
 
 <br/>
@@ -64,15 +61,34 @@ If the root node is null, indicating an empty tree, the function immediately ret
 If the root node is not null, the function uses destructuring assignment to extract the `left` and `right` children of the root node.
 <br/>
 
-The function then recursively calls itself on the "left" and "right" children, storing the returned values in the variables `sumLeft` and `sumRight` respectively.
+The function then recursively calls itself on the `left` and `right` children, storing the returned values in the variables `sumLeft` and `sumRight` respectively.
 <br/>
 
 Next, it checks if `sumLeft` is `0`, which means there are no left leaves encountered yet. It also checks if the `left` child exists and is a leaf node, meaning it has no left or right child. If these conditions are met, the value of the leaf node is assigned to `sumLeft`.
 <br/>
 
-Finally, the function returns the sum of `sumLeft` and `sumRight`, after converting them to numbers using the "Number" function.
+Finally, the function returns the sum of `sumLeft` and `sumRight`, after converting them to numbers using the `Number` function.
 <br/>
 
 In summary, this function recursively calculates the sum of the values of the left leaves in a binary tree. It traverses the tree, keeping track of the sum of the left leaves encountered so far, and returns the final sum.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Diameter of Binary Tree)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Same Tree)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Tree Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptDiameterOfBinaryTree.md
+[Previous]: https://github.com/Superklok/JavaScriptTrees/blob/main/JavaScriptSameTree.md
+[More]: https://github.com/Superklok/JavaScriptTrees
+[Return]: https://github.com/Superklok/LearnJavaScript

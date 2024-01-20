@@ -39,7 +39,7 @@ const postorder = (root) => {
     if (!root) return [];
 
     let res   = [],
-        stack = [ root ];
+        stack = [root];
 
     while (stack.length > 0) {
         root = stack.pop();

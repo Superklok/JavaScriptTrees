@@ -13,7 +13,8 @@ A leaf is a node with no children. A left leaf is a leaf that is the left child 
 ```JavaScript
 Input: root = [3,9,20,null,null,15,7]
 Output: 24
-Explanation: There are two left leaves in the binary tree, with values 9 and 15 respectively.
+Explanation: There are two left leaves in the binary tree,
+             with values 9 and 15 respectively.
 ```
 
 ### 2<sup>nd</sup> Example

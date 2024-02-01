@@ -13,7 +13,8 @@ The length of the path between two nodes is represented by the number of edges b
 ```JavaScript
 Input: root = [5,4,5,1,1,null,5]
 Output: 2
-Explanation: The shown image shows that the longest path of the same value (ex. 5).
+Explanation: The shown image shows that the longest
+             path of the same value (ex. 5).
 ```
 
 ### 2<sup>nd</sup> Example
@@ -21,7 +22,8 @@ Explanation: The shown image shows that the longest path of the same value (ex. 
 ```JavaScript
 Input: root = [1,4,5,4,4,null,5]
 Output: 2
-Explanation: The shown image shows that the longest path of the same value (ex. 4).
+Explanation: The shown image shows that the longest
+             path of the same value (ex. 4).
 ```
 
 <br/>
